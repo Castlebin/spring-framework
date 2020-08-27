@@ -7,7 +7,7 @@ _Within your locally cloned spring-framework working directory:_
 1. Precompile `spring-oxm` with `./gradlew :spring-oxm:compileTestJava`
 
 
-    gradlew :spring-core:compileTestJava :spring-oxm:compileTestJava
+    ./gradlew :spring-core:compileTestJava :spring-oxm:compileTestJava
 
 
 2. Import into IntelliJ (File -> New -> Project from Existing Sources -> Navigate to directory -> Select build.gradle)
