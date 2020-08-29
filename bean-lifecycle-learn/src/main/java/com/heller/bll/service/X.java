@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class X {
 
 	@Autowired
-	private X x;
-
-	@Autowired
 	private Y y;
 
 	public X() {
