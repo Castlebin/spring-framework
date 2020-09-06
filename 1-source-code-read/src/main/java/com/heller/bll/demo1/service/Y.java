@@ -1,16 +1,16 @@
-package com.heller.bll.service;
+package com.heller.bll.demo1.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
-public class X {
+public class Y {
 
 	@Autowired
-	private Y y;
+	private X x;
 
-	public X() {
-		System.out.println("create X ...");
+	public Y() {
+		System.out.println("create Y ...");
 	}
 
 }
