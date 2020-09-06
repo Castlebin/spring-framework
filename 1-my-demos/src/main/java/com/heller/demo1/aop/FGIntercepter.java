@@ -6,24 +6,25 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class XIntercepter {
+public class FGIntercepter {
 
-	@Pointcut("execution(* com.heller.demo1.service.X.*(..))")
+	@Pointcut("execution(* com.heller.demo1.service.F.*(..))" +
+			"|| execution(* com.heller.demo1.service.G.*(..))")
 	public void pointCut() { }
 
 	@Before("pointCut()")
 	public void before() {
-		System.out.println("...x before...");
+		System.out.println("...f/g before...");
 	}
 
 	@After("pointCut()")
 	public void after() {
-		System.out.println("...x after...");
+		System.out.println("...f/g after...");
 	}
 
 	@Around("pointCut()")
 	public Object around(ProceedingJoinPoint pjp) {
-		System.out.println("...x around before...");
+		System.out.println("...f/g around before...");
 
 		Object result = null;
 		try {
@@ -32,7 +33,7 @@ public class XIntercepter {
 			e.printStackTrace();
 		}
 
-		System.out.println("...x around after...");
+		System.out.println("...f/g around after...");
 		return result;
 	}
 

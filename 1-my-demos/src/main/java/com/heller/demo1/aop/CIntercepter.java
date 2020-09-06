@@ -6,24 +6,24 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class WIntercepter {
+public class CIntercepter {
 
-	@Pointcut("execution(* com.heller.demo1.service.W.*(..))")
+	@Pointcut("execution(* com.heller.demo1.service.C.*(..))")
 	public void pointCut() { }
 
 	@Before("pointCut()")
 	public void before() {
-		System.out.println("...w before...");
+		System.out.println("...c before...");
 	}
 
 	@After("pointCut()")
 	public void after() {
-		System.out.println("...w after...");
+		System.out.println("...c after...");
 	}
 
 	@Around("pointCut()")
 	public Object around(ProceedingJoinPoint pjp) {
-		System.out.println("...w around before...");
+		System.out.println("...c around before...");
 
 		Object result = null;
 		try {
@@ -32,7 +32,7 @@ public class WIntercepter {
 			e.printStackTrace();
 		}
 
-		System.out.println("...w around after...");
+		System.out.println("...c around after...");
 		return result;
 	}
 
