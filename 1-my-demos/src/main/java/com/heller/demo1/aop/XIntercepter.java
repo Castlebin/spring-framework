@@ -2,7 +2,9 @@ package com.heller.demo1.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.stereotype.Component;
 
+@Component
 @Aspect
 public class XIntercepter {
 
