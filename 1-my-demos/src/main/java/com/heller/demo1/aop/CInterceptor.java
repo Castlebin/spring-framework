@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class CIntercepter {
+public class CInterceptor {
 
 	@Pointcut("execution(* com.heller.demo1.service.C.*(..))")
 	public void pointCut() { }

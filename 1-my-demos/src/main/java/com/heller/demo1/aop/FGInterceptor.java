@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class FGIntercepter {
+public class FGInterceptor {
 
 	@Pointcut("execution(* com.heller.demo1.service.F.*(..))" +
 			"|| execution(* com.heller.demo1.service.G.*(..))")
