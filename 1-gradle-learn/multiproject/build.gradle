@@ -16,7 +16,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
-
+// gradle -q hello
 allprojects {
     task hello {
         doLast { task ->
@@ -25,3 +25,11 @@ allprojects {
     }
 }
 
+// gradle -q hello
+subprojects {
+    hello {
+        doLast {
+            println "- I a subproject"
+        }
+    }
+}
