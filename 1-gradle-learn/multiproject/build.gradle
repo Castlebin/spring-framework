@@ -48,7 +48,7 @@ project(':game').hello {
 configure(subprojects.findAll {it.name == 'core'}) {
     hello {
         doLast {
-            println "- $project.name, I'm the configure project."
+            println "- $project.name, I'm the configured project."
         }
     }
 }
