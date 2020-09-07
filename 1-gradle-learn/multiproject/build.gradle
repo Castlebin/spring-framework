@@ -63,3 +63,45 @@ subprojects {
         testCompile "junit:junit:4.12"
     }
 }
+
+// 为所有工程定义公共配置
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+
+    // 设置 JDK 版本
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    // 设置编译使用utf-8编码
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+    tasks.withType(Javadoc) {
+        options.encoding = 'UTF-8'
+    }
+    tasks.withType(Test) {
+        systemProperty "file.encoding", "UTF-8"
+    }
+
+    // 使用远程仓库，
+    repositories {
+        mavenCentral()
+    }
+
+    // 使用了自定义的仓库，比如公司的nexus私服
+/*
+    repositories {
+       maven {
+            url "http://192.168.99.90:8081/nexus/content/groups/public/"
+        }
+    }
+*/
+
+    // 定义了公共的依赖库
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+
+}

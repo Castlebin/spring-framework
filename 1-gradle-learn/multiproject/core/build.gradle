@@ -4,4 +4,6 @@ plugins {
 
 dependencies {
 
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+
 }
