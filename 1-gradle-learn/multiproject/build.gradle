@@ -43,3 +43,13 @@ project(':game').hello {
     }
 }
 
+// gradle -q hello
+// configure方法接受一个列表作为参数，然后可以把配置项应用到列表中的工程中
+configure(subprojects.findAll {it.name == 'core'}) {
+    hello {
+        doLast {
+            println "- $project.name, I'm the configure project."
+        }
+    }
+}
+
