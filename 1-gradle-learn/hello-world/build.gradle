@@ -21,3 +21,19 @@ jar {
     baseName = 'hello-world-jar'
     version = '0.1-SNAPSHOT'
 }
+
+
+// 定义一个 task
+task hello {
+    doLast {
+        println "i'm build task"
+    }
+}
+
+// 定义 task 的 依赖性
+task world(dependsOn: hello) {
+    doLast {
+        println "I'm release task"
+    }
+}
+
