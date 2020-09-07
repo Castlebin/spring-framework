@@ -105,3 +105,43 @@ allprojects {
     }
 
 }
+
+// 为所有的子工程添加uploadArchives任务
+subprojects{
+    uploadArchives {
+        repositories {
+            flatDir {
+                dirs rootDir.absolutePath + "/release_dir"
+            }
+        }
+    }
+}
+
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        api(MavenPublication) {
+            // 定义maven中的坐标，groupId、artifactId和version的值
+            groupId 'com.game.game-service-api'
+            artifactId 'game-service-api'
+            version '0.0.1'
+
+            from components.java
+        }
+    }
+}
+
+publishing {
+    // 定义maven私服地址和帐号密码
+/*    repositories {
+        maven {
+            url "http://192.168.99.90:8081/nexus/content/repositories/thirdparty/"
+            credentials {
+                username 'admin'
+                password 'admin123'
+            }
+        }
+    }*/
+}
+
