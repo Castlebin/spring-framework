@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    compile(project(":spring-webflux"))
+    compile(project(":spring-webmvc"))
 
     compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.6'
 
