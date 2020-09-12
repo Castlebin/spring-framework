@@ -9,6 +9,10 @@ _Within your locally cloned spring-framework working directory:_
 
     ./gradlew :spring-core:compileTestJava :spring-oxm:compileTestJava
 
+  build 时，跳过测试和checkstyle
+
+    ./gradlew build -x checkstyleMain -x checkstyleTest -x checkstyleTestFixtures -x checkstyleNohttp -x test -x junit
+
 
 2. Import into IntelliJ (File -> New -> Project from Existing Sources -> Navigate to directory -> Select build.gradle)
 3. When prompted exclude the `spring-aspects` module (or after the import via File-> Project Structure -> Modules)
