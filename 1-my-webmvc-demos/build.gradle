@@ -1,0 +1,20 @@
+apply plugin: "java"
+
+group 'com.heller'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile fileTree(dir: 'lib', includes: ['*jar'])
+    compile(project(":spring-webmvc"))
+
+    testCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+
+    compile("org.apache.tomcat.embed:tomcat-embed-core:8.5.33")
+
+}
