@@ -17,7 +17,7 @@ dependencies {
 
     // 使用的是 tomcat 8 ，现在版本 spring web（5.2.8） 对应的 spring boot（2.3.3） 默认的 tomcat 是 9 了，会不一样
     compile("org.apache.tomcat.embed:tomcat-embed-core:8.5.33")
-//  compile group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '8.5.50'
+//  compile group: 'org.apache.tomcat.embed', name: 'tomcat-jasper', version: '8.5.50'
 
 //    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core'
 //    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.37'
