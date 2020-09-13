@@ -15,6 +15,6 @@ dependencies {
 
     testCompile group: 'javax.servlet', name: 'javax.servlet-api'
 
-    compile("org.apache.tomcat.embed:tomcat-embed-core")
+    compile("org.apache.tomcat.embed:tomcat-embed-core:8.5.50")
 
 }
