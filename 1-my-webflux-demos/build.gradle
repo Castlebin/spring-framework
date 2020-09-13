@@ -1,0 +1,16 @@
+apply plugin: "java"
+
+group 'com.heller'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+//    compile fileTree(dir: 'lib', includes: ['*jar'])
+    compile(project(":spring-webflux"))
+
+}

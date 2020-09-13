@@ -38,7 +38,7 @@ rootProject.children.each {project ->
 }
 
 include "1-my-demos"
-include "1-my-webmvc-demos"
+include "1-my-webservlet-demos"
 include "1-my-webflux-demos"
 include "1-source-code-read"
 include "1-spring-learn"
