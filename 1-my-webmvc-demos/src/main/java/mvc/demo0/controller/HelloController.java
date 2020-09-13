@@ -5,13 +5,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/demo0")
 public class HelloController {
 
-	// http://localhost:8080/hello?name=LiLei
-	@ResponseBody
+	// !! URL
+	// http://localhost:8080/demo0/demo0/hello?name=LiLei
 	@RequestMapping("/hello")
+	@ResponseBody
 	public String sayHello(String name) {
+		System.out.println("Hello, " + name);
 		return "Hello, " + name;
 	}
 
