@@ -15,7 +15,11 @@ dependencies {
 
     testCompile group: 'javax.servlet', name: 'javax.servlet-api'
 
-    compile("org.apache.tomcat.embed:tomcat-embed-core:8.5.50")
+    compile("org.apache.tomcat.embed:tomcat-embed-core:8.5.33")
 //  compile group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '8.5.50'
+
+//    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core'
+//    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.37'
+
 
 }
