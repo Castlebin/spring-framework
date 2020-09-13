@@ -14,7 +14,7 @@ public class SpringApplication {
 		// 注意，这里的 nihao，也要作为 url path 的前缀 ！！！
 	//	tomcat.addWebapp("/nihao", "/Users/heller/tmp");
 		// 使用 了 addContext() 代替 addWebapp() ，所以 不会 需要 jsp 包，不会启动时报 jsp 的异常了
-		// Spring Boot 内部也是如此
+		// Spring Boot 内部也是类似，在 context 的 onfresh() 方法中，新建 并 初始化 web 容器。但是，要比这里复杂得多
 		tomcat.addContext("/nihao", "/Users/heller/tmp");
 
 		AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
