@@ -9,6 +9,10 @@ import org.springframework.web.servlet.DispatcherServlet;
 public class SpringApplication {
 	public static void run() {
 		Tomcat tomcat = new Tomcat();
+
+		// 进入看一下 setBaseDir 的 描述
+		tomcat.setBaseDir("/Users/heller/tmp");
+
 		tomcat.setPort(8080);
 
 		// 注意，这里的 nihao，也要作为 url path 的前缀 ！！！

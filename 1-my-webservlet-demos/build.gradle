@@ -10,15 +10,6 @@ repositories {
 }
 
 dependencies {
-//    compile fileTree(dir: 'lib', includes: ['*jar'])
     compile(project(":spring-webmvc"))
-
-    // 使用的是 tomcat 8 ，现在版本 spring web 默认的是 tomcat 是 9 了，很多不一样
-//    compile("org.apache.tomcat.embed:tomcat-embed-core:8.5.33")
-//  compile group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '8.5.50'
-
-//    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core'
-//    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.37'
-
 
 }
