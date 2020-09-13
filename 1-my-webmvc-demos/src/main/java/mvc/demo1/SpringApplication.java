@@ -12,6 +12,7 @@ public class SpringApplication {
 		tomcat.setPort(8080);
 		try {
 			tomcat.addWebapp("/", "/Users/heller/tmp");
+
 			tomcat.start();
 			tomcat.getServer().await();
 		} catch (LifecycleException e) {
