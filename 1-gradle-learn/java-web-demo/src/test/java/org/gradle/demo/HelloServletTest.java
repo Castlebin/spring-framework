@@ -15,6 +15,7 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class HelloServletTest {
+
 	@Mock private HttpServletRequest request;
 	@Mock private HttpServletResponse response;
 	@Mock private RequestDispatcher requestDispatcher;
@@ -58,4 +59,5 @@ public class HelloServletTest {
 		verify(request).setAttribute("user", "Dolly");
 		verify(requestDispatcher).forward(request,response);
 	}
+
 }
