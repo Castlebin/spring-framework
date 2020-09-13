@@ -15,6 +15,7 @@ dependencies {
 
     testCompile group: 'javax.servlet', name: 'javax.servlet-api'
 
+    // 使用的是 tomcat 8 ，现在版本 spring web 默认的是 tomcat 是 9 了，会不一样
     compile("org.apache.tomcat.embed:tomcat-embed-core:8.5.33")
 //  compile group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '8.5.50'
 
