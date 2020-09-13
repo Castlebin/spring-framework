@@ -1,4 +1,0 @@
-rootProject.name = '1-spring-learn'
-
-include 'bean-lifecycle'
-include 'spring-beanfactory-init'
