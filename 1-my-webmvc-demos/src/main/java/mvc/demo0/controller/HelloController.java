@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/demo0")
 public class HelloController {
 
-	// !! URL
+	// !! URL  注册 DispatcherServlet 有个 demo0 的前缀 ，之后，才是代码中 我们自定义的url
 	// http://localhost:8080/demo0/demo0/hello?name=LiLei
 	@RequestMapping("/hello")
 	@ResponseBody
